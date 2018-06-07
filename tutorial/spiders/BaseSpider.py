@@ -35,8 +35,8 @@ class BaseSpider(ExRedisSpider):
         if json_data:
             json_data = json_data.group(1) + '"me":""}'
             json_data = json.loads(json_data)
-        response.json_data = json_data
-        return json_data
+            response.json_data = json_data
+            return json_data
 
     @staticmethod
     def extract_person_url(response):

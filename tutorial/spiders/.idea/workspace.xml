@@ -21,11 +21,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseSpider.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BaseSpider.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BaseSpider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="38" column="24" lean-forward="true" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+            <state relative-caret-position="-33">
+              <caret line="37" column="12" lean-forward="true" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -43,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UtilSpider.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UtilSpider.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/UtilSpider.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="57" column="27" lean-forward="false" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="29" />
+              <caret line="57" column="41" lean-forward="false" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -72,6 +72,8 @@
       <find>init_check</find>
       <find>pdb.</find>
       <find>.json_data</find>
+      <find>json_data</find>
+      <find>hasattr</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -83,8 +85,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/AoiSpider.py" />
-        <option value="$PROJECT_DIR$/UtilSpider.py" />
         <option value="$PROJECT_DIR$/BaseSpider.py" />
+        <option value="$PROJECT_DIR$/UtilSpider.py" />
       </list>
     </option>
   </component>
@@ -276,12 +278,12 @@
       <updated>1528252237433</updated>
       <workItem from="1528252238804" duration="1376000" />
       <workItem from="1528277415744" duration="616000" />
-      <workItem from="1528333699847" duration="2918000" />
+      <workItem from="1528333699847" duration="3060000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4910000" />
+    <option name="totallyTimeSpent" value="5052000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -430,10 +432,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UtilSpider.py">
+    <entry file="file://$PROJECT_DIR$/BaseSpider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="57" column="27" lean-forward="false" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="29" />
+        <state relative-caret-position="-33">
+          <caret line="37" column="12" lean-forward="true" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -448,10 +450,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BaseSpider.py">
+    <entry file="file://$PROJECT_DIR$/UtilSpider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="38" column="24" lean-forward="true" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+        <state relative-caret-position="306">
+          <caret line="57" column="41" lean-forward="false" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
           <folding />
         </state>
       </provider>
