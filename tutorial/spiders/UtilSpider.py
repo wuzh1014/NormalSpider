@@ -11,7 +11,6 @@ class UtilSpider(BaseSpider):
         pass
 
     def extract_url(self, response):
-        # pdb.set_trace()
         if len(response.all_url) > 0:
             get_domain_list = []
             get_url_list = []
@@ -28,6 +27,8 @@ class UtilSpider(BaseSpider):
                     url_domain = response.page_domain
                 elif not opt.scheme():
                     url = 'http://' + url
+                if url_domain.find('eastmoney') == -1:
+                    return
                 response.pipe.get(response.spider_name + 'been_url:' + url)
                 get_domain_list.append(url_domain)
                 get_url_list.append(url)

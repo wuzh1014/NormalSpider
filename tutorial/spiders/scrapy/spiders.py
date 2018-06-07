@@ -120,6 +120,8 @@ class RedisMixin(object):
         url = bytes_to_str(data, self.redis_encoding)
         opt = URL(url)
         print(url)
+        if opt.domain().find('eastmoney') == -1:
+            return
         if opt.domain() == 'iguba.eastmoney.com':
             self.rlink.lpush(self.redis_key, url)
             been_flag = self.rlink.get(self.redis_name + 'been_url:' + url)
