@@ -11,7 +11,7 @@ class UtilSpider(BaseSpider):
         pass
 
     def extract_url(self, response):
-        pdb.set_trace()
+        # pdb.set_trace()
         if len(response.all_url) > 0:
             get_domain_list = []
             get_url_list = []

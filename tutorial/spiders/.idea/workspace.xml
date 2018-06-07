@@ -34,8 +34,8 @@
       <file leaf-file-name="AoiSpider.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AoiSpider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="53" column="35" lean-forward="true" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
+            <state relative-caret-position="759">
+              <caret line="60" column="46" lean-forward="true" selection-start-line="60" selection-start-column="46" selection-end-line="60" selection-end-column="46" />
               <folding>
                 <element signature="e#15#25#0" expanded="true" />
               </folding>
@@ -70,6 +70,7 @@
       <find>dateUtil</find>
       <find>iguba.eastmoney.com</find>
       <find>init_check</find>
+      <find>pdb.</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -273,12 +274,12 @@
       <updated>1528252237433</updated>
       <workItem from="1528252238804" duration="1376000" />
       <workItem from="1528277415744" duration="616000" />
-      <workItem from="1528333699847" duration="2551000" />
+      <workItem from="1528333699847" duration="2591000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4543000" />
+    <option name="totallyTimeSpent" value="4583000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -437,8 +438,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AoiSpider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="53" column="35" lean-forward="true" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
+        <state relative-caret-position="759">
+          <caret line="60" column="46" lean-forward="true" selection-start-line="60" selection-start-column="46" selection-end-line="60" selection-end-column="46" />
           <folding>
             <element signature="e#15#25#0" expanded="true" />
           </folding>
