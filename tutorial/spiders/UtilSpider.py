@@ -55,7 +55,7 @@ class UtilSpider(BaseSpider):
     @staticmethod
     def format_item_list(response):
         input_list = []
-        if response.get('json_data'):
+        if response.hasattr('json_data'):
             for item in response.json_data.get('re'):
                 date_str = str(item.get('post_publish_time'))
                 post_content = str(item.get('post_content'))
