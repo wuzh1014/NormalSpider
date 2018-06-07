@@ -33,7 +33,7 @@ class AoiSpider(UtilSpider):
         response.pipe.multi()
 
     def parse(self, response):
-        response.spider_name = AoiSpider.name
+        response.spider_name = AoiSpider.redis_name
         AoiSpider.deal_domain(response)
 
         self.rlink.setex(response.spider_name + 'been_url:' + response.url, 1, self.day_time * 1)

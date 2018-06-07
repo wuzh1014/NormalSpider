@@ -28,14 +28,14 @@ class Analyser:
                     print('RedisMixin 1')
                     time.sleep(1)
 
-                fetch_date = self.rlink.zrange(RedisMixin.name + 'date_list', self.date_pointer, self.date_pointer + 1)
-                analysed = self.rlink.hget(RedisMixin.name + 'analysed_date', self.date_pointer)
+                fetch_date = self.rlink.zrange(RedisMixin.redis_name + 'date_list', self.date_pointer, self.date_pointer + 1)
+                analysed = self.rlink.hget(RedisMixin.redis_name + 'analysed_date', self.date_pointer)
                 if analysed:
                     time.sleep(1)
                     continue
                 if fetch_date:
-                    self.rlink.hset(RedisMixin.name + 'analysed_date', self.date_pointer, 1)
-                    date_str_set = self.rlink.hvals(RedisMixin.name + 'content_map:' + fetch_date)
+                    self.rlink.hset(RedisMixin.redis_name + 'analysed_date', self.date_pointer, 1)
+                    date_str_set = self.rlink.hvals(RedisMixin.redis_name + 'content_map:' + fetch_date)
                     date_str = ','.join(date_str_set)
                     print('cal_most_freq_word')
                     self.cal_most_freq_word(date_str, fetch_date)
@@ -56,13 +56,13 @@ class Analyser:
         for i in range(len(clean_list)):
             if clean_list[i][1] > 1:
                 if Tool.check_contain_chinese(clean_list[i][0]):
-                    self.pipe.hincrby(RedisMixin.name + 'freq_count_date:' + str(fetch_date), clean_list[i][0], 1)
+                    self.pipe.hincrby(RedisMixin.redis_name + 'freq_count_date:' + str(fetch_date), clean_list[i][0], 1)
         self.pipe.execute()
 
     def clean_with_ban_list(self, word_map):
         clean_list = []
         for i in word_map:
-            self.pipe.get(RedisMixin.name + 'ban_freq_word:' + i)
+            self.pipe.get(RedisMixin.redis_name + 'ban_freq_word:' + i)
         ban_list = self.pipe.execute()
         index = -1
         for i in word_map:

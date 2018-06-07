@@ -24,7 +24,7 @@ class BaseSpider(ExRedisSpider):
         pass
 
     def __init__(self, *args, **kwargs):
-        self.rlink.set('started_service:spider', 1)
+        # self.rlink.set('started_service:spider', 1)
         domain = kwargs.pop('domain', '')
         self.allowed_domains = [_f for _f in domain.split(',') if _f]
         super(BaseSpider, self).__init__()

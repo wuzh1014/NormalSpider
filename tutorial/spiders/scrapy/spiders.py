@@ -21,9 +21,9 @@ class RedisMixin(object):
     server = None
     rlink = None
 
-
     redis_key = 'guba_spider:start_urls'
-    name = "guba_spider:"
+    redis_name = "guba_spider:"
+    name = "guba_spider"
     site_no_add_content_count = 0
 
     def start_requests(self):
@@ -122,7 +122,7 @@ class RedisMixin(object):
         print(url)
         if opt.domain() == 'iguba.eastmoney.com':
             self.rlink.lpush(self.redis_key, url)
-            been_flag = self.rlink.get(self.name + 'been_url:' + url)
+            been_flag = self.rlink.get(self.redis_name + 'been_url:' + url)
             if been_flag:
                 RedisMixin.site_no_add_content_count += 1
                 time.sleep(RedisMixin.site_no_add_content_count * RedisMixin.site_no_add_content_count)
