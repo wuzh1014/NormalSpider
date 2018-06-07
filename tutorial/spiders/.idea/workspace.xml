@@ -21,11 +21,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseSpider.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BaseSpider.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BaseSpider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="57" column="18" lean-forward="false" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="18" />
+            <state relative-caret-position="273">
+              <caret line="38" column="24" lean-forward="true" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -43,21 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UtilSpider.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UtilSpider.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UtilSpider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="59" column="52" lean-forward="true" selection-start-line="59" selection-start-column="52" selection-end-line="59" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spiders.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scrapy/spiders.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="121" column="18" lean-forward="true" selection-start-line="121" selection-start-column="18" selection-end-line="121" selection-end-column="18" />
+            <state relative-caret-position="306">
+              <caret line="57" column="27" lean-forward="false" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -92,9 +82,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/BaseSpider.py" />
         <option value="$PROJECT_DIR$/AoiSpider.py" />
         <option value="$PROJECT_DIR$/UtilSpider.py" />
+        <option value="$PROJECT_DIR$/BaseSpider.py" />
       </list>
     </option>
   </component>
@@ -286,12 +276,12 @@
       <updated>1528252237433</updated>
       <workItem from="1528252238804" duration="1376000" />
       <workItem from="1528277415744" duration="616000" />
-      <workItem from="1528333699847" duration="2750000" />
+      <workItem from="1528333699847" duration="2918000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4742000" />
+    <option name="totallyTimeSpent" value="4910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -432,18 +422,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BaseSpider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="57" column="18" lean-forward="false" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scrapy/spiders.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="121" column="18" lean-forward="true" selection-start-line="121" selection-start-column="18" selection-end-line="121" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UtilSpider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="57" column="27" lean-forward="false" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -458,10 +448,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UtilSpider.py">
+    <entry file="file://$PROJECT_DIR$/BaseSpider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="59" column="52" lean-forward="true" selection-start-line="59" selection-start-column="52" selection-end-line="59" selection-end-column="52" />
+        <state relative-caret-position="273">
+          <caret line="38" column="24" lean-forward="true" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
           <folding />
         </state>
       </provider>
