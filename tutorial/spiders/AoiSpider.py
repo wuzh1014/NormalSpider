@@ -55,6 +55,8 @@ class AoiSpider(UtilSpider):
                 return
             else:
                 self.rlink.set(content_pre, body_md5)
+        else:
+            response.is_target = False
 
         if not AoiSpider.init_check(response):
             return
