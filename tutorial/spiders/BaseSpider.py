@@ -65,7 +65,8 @@ class BaseSpider(ExRedisSpider):
             else:
                 BaseSpider.extract_normal_url(response)
         except Exception as e:
-            print('response has no text' + e)
+            print('response has no text')
+            print(e)
             print(response)
             return False
         return True
