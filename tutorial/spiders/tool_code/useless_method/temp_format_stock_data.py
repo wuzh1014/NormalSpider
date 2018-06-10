@@ -10,7 +10,7 @@ from tool import *
 
 def temp_format_stock_data():
     global service_ip
-    rlink = redis.StrictRedis(host=service_ip, port=6379, db=0)
+    rlink = redis.StrictRedis(host=service_ip, port=6479, db=0)
     pipe = rlink.pipeline()
     pipe.multi()
     try:

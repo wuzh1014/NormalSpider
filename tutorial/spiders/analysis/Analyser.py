@@ -17,7 +17,7 @@ class Analyser:
     date_pointer = 0
 
     def __init__(self):
-        self.rlink = redis.StrictRedis(host=Tool.service_ip, port=6379, db=0)
+        self.rlink = redis.StrictRedis(host=Tool.service_ip, port=6479, db=0)
         pipe = self.rlink.pipeline()
         pipe.multi()
 
