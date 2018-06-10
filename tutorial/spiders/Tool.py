@@ -6,7 +6,7 @@ import time
 import dateutil.parser as dateparser
 
 class Tool:
-    service_ip = '127.0.0.1'
+    service_ip = '35.194.116.91'
     group_analysis_flag = True
     learning_trend_flag = True
     lock = threading.Lock()

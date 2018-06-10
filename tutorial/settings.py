@@ -23,7 +23,7 @@ ITEM_PIPELINES = {
 }
 
 
-REDIS_HOST = '127.0.0.1'
+REDIS_HOST = '35.194.116.91'
 REDIS_PORT = 6479
 REDIS_PARAMS = {
     'password': 'fuck-u-ass-hole-guy'

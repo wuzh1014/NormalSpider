@@ -15,7 +15,7 @@ class AoiSpider(UtilSpider):
     avg_size = 0
 
     def __init__(self):
-        self.rlink = redis.StrictRedis(host=Tool.service_ip, port=6479, db=0, password='fuck-u-ass-hole-guy')
+        self.rlink = redis.Redis(host=Tool.service_ip, port=6479, db=0, password='fuck-u-ass-hole-guy')
         super(AoiSpider, self).__init__()
 
     @staticmethod
@@ -64,9 +64,10 @@ class AoiSpider(UtilSpider):
         self.init_parse(response)
         if not self.extract_url(response):
             return
-        print('clean_extract_word')
-        if not SpiderUtil.clean_extract_word(response):
-            return
-        print('parse_date')
-        if not AoiSpider.parse_date(response):
-            return
+        # print('clean_extract_word')
+        # if not SpiderUtil.clean_extract_word(response):
+        #     return
+        if hasattr(response, 'json_data'):
+            print('parse_date')
+            if not AoiSpider.parse_date(response):
+                return

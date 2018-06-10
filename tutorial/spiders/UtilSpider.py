@@ -56,20 +56,20 @@ class UtilSpider(BaseSpider):
     @staticmethod
     def format_item_list(response):
         input_list = []
-        if hasattr(response, 'json_data'):
-            for item in response.json_data.get('re'):
-                date_str = str(item.get('post_publish_time'))
-                post_content = str(item.get('post_content'))
-                user_id = str(item.get('post_user').get('user_id'))
-                post_date = Tool.parse_date(date_str)
-                date_key = date_str.split(' ')[0].replace('-', '')
-                input_list.append((date_key, user_id, post_content))
+        for item in response.json_data.get('re'):
+            date_str = str(item.get('post_publish_time'))
+            post_content = str(item.get('post_content'))
+            user_id = str(item.get('post_user').get('user_id'))
+            post_date = Tool.parse_date(date_str)
+            date_key = date_str.split(' ')[0].replace('-', '')
+            input_list.append((date_key, user_id, post_content))
         return input_list
 
     @staticmethod
     def parse_date(response):
         input_list = UtilSpider.format_item_list(response)
         date_map = {}
+        pdb.set_trace()
         for item in input_list:
             response.pipe.hset(response.spider_name + 'content_map:' + item[0], item[1], item[2])
             date_map[item[0]] = 1
