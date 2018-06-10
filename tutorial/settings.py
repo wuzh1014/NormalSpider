@@ -22,12 +22,12 @@ ITEM_PIPELINES = {
     'scrapy_redis.pipelines.RedisPipeline': 300
 }
 
-# REDIS_HOST = '110.173.23.85'
-# REDIS_HOST = '192.168.100.7'
-# REDIS_HOST = '192.168.100.9'
-REDIS_HOST = '127.0.0.1'
-REDIS_PORT = 6379
 
+REDIS_HOST = '127.0.0.1'
+REDIS_PORT = 6479
+REDIS_PARAMS = {
+    'password': 'fuck-u-ass-hole-guy'
+}
 
 LOG_LEVEL = 'ERROR'
 

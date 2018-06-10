@@ -33,7 +33,7 @@ def init_default_dict(pipe):
     
 if __name__ == "__main__":
     global service_ip
-    rlink = redis.Redis(host=service_ip,port=6479,db=0)
+    rlink = redis.StrictRedis(host=service_ip, port=6479, db=0, password='fuck-u-ass-hole-guy')
     pipe = rlink.pipeline()
     pipe.multi()
     init_default_dict(pipe)
