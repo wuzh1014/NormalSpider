@@ -15,7 +15,8 @@ class AoiSpider(UtilSpider):
     avg_size = 0
 
     def __init__(self):
-        self.rlink = redis.Redis(host=Tool.service_ip, port=6479, db=0, password='fuck-u-ass-hole-guy')
+        pool = redis.ConnectionPool(host=Tool.service_ip, port=6479, password='fuck-u-ass-hole-guy')
+        self.rlink = redis.StrictRedis(connection_pool=pool)
         super(AoiSpider, self).__init__()
 
     @staticmethod
@@ -28,13 +29,16 @@ class AoiSpider(UtilSpider):
         response.page_prefix = response.scheme + '://' + response.page_domain + '/'
 
     def init_parse(self, response):
-        self.rlink.setex(response.spider_name + 'living', 1, 10)
+        self.rlink.setex(response.spider_name + 'living', 10, 1)
+        pdb.set_trace()
         response.pipe = self.rlink.pipeline()
         response.pipe.multi()
 
     def parse(self, response):
         response.spider_name = AoiSpider.redis_name
         AoiSpider.deal_domain(response)
+
+        self.init_parse(response)
 
         self.rlink.setex(response.spider_name + 'been_url:' + response.url, 1, self.day_time * 1)
         if response.page_domain == 'iguba.eastmoney.com':
@@ -53,6 +57,7 @@ class AoiSpider(UtilSpider):
             content_pre = response.spider_name + 'cache_content:' + response.url
             pre_md5 = self.rlink.get(content_pre)
             if pre_md5 == body_md5:
+                print('same md5')
                 return
             else:
                 self.rlink.set(content_pre, body_md5)
@@ -60,14 +65,14 @@ class AoiSpider(UtilSpider):
             response.is_target = False
 
         if not AoiSpider.init_check(response):
+            print('init_check false')
             return
-        self.init_parse(response)
         if not self.extract_url(response):
+            print('extract_url false')
             return
-        # print('clean_extract_word')
-        # if not SpiderUtil.clean_extract_word(response):
-        #     return
         if hasattr(response, 'json_data'):
-            print('parse_date')
             if not AoiSpider.parse_date(response):
+                print('parse_date false')
                 return
+        else:
+            print('hasattr false')

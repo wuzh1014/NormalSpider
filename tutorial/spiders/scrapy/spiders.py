@@ -5,6 +5,7 @@ import time
 from scrapy_redis import connection, defaults
 from scrapy_redis.utils import bytes_to_str
 import redis
+import pdb
 import sys
 sys.path.append("../../../")
 from tutorial.spiders.Tool import Tool
@@ -121,6 +122,7 @@ class RedisMixin(object):
         opt = URL(url)
         print(url)
         if opt.domain().find('eastmoney') == -1:
+            print('eastmoney false')
             return
         if opt.domain() == 'iguba.eastmoney.com':
             self.rlink.lpush(self.redis_key, url)
@@ -128,6 +130,7 @@ class RedisMixin(object):
             if been_flag:
                 RedisMixin.site_no_add_content_count += 1
                 time.sleep(RedisMixin.site_no_add_content_count * RedisMixin.site_no_add_content_count)
+                print('been_flag false')
                 return
             else:
                 RedisMixin.site_no_add_content_count = 0

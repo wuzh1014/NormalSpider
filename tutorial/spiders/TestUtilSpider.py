@@ -1,6 +1,7 @@
 # coding:utf-8
 import re
 import time
+import redis
 from purl import URL
 import hashlib
 import unittest
@@ -9,7 +10,9 @@ from tutorial.spiders.SpiderUtil import *
 from tutorial.spiders.Tool import *
 from tutorial.spiders.BaseSpider import *
 from tutorial.spiders.AoiSpider import *
+from tutorial.spiders.Tool import Tool
 import json
+
 
 class TestUtilSpider(unittest.TestCase):
     def setUp(self):
@@ -17,6 +20,15 @@ class TestUtilSpider(unittest.TestCase):
 
     def tearDown(self):
         pass
+
+    def test_redis(self):
+        pool = redis.ConnectionPool(host=Tool.service_ip, port=6479, password='fuck-u-ass-hole-guy')
+        self.rlink = redis.StrictRedis(connection_pool=pool)
+        self.rlink.setex('justTest', 20, 233)
+        value = self.rlink.get('justTest').decode()
+        print(value)
+        assert value == '233'
+        return True
 
     def test_check_contain_chinese(self):
         test_str = '12312的3123'
