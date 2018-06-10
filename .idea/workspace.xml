@@ -1,59 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15071d6a-2d6a-4457-b163-3e40f3231134" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutorial/spiders/SpiderUtil.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutorial/spiders/TestUtilSpider.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutorial/spiders/analysis/Analyser.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutorial/spiders/scrapy/spiders.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aoi.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codebin/BakBaseSpider.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codebin/BakUtilSpider.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codebin/dmoz_spider.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codebin/local_analysis.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codebin/main_control.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codebin/main_control_try.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codebin/note" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codebin/pull_string.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codebin/re_test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codebin/sample_knowledge.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codebin/show_dict.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codebin/split_learning.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codebin/step.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codebin/test_math.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/codebin/test_redis.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/spiders/step_2_pull/PullClass.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/spiders/step_3_group/FindMiddle.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/spiders/step_3_group/GroupAnalysis.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/spiders/step_3_group/OutlineAlgo.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/spiders/step_3_group/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/spiders/step_4_data_line/SetLines.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/spiders/step_4_data_line/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/spiders/step_5_1_stock_init/StockDataCron.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/spiders/step_5_1_stock_init/StockList.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/spiders/step_5_1_stock_init/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/spiders/step_5_2_stock/FullStockDataCron.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/spiders/step_5_2_stock/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/spiders/step_6_pre_format/FormatStockData.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/spiders/step_6_pre_format/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/spiders/step_7_predict/Predict.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/spiders/step_7_predict/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/spiders/tool_code/main_dos.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/spiders/tool_code/nextStep.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tutorial/spiders/tool_code/rungoose.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Administrator.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Administrator.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/spiders/AoiSpider.py" afterPath="$PROJECT_DIR$/tutorial/spiders/AoiSpider.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/spiders/BaseSpider.py" afterPath="$PROJECT_DIR$/tutorial/spiders/BaseSpider.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/spiders/Tool.py" afterPath="$PROJECT_DIR$/tutorial/spiders/Tool.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/spiders/UtilSpider.py" afterPath="$PROJECT_DIR$/tutorial/spiders/UtilSpider.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/codebin/__init__.py" afterPath="$PROJECT_DIR$/tutorial/spiders/analysis/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tutorial/spiders/step_2_pull/__init__.py" afterPath="$PROJECT_DIR$/tutorial/spiders/scrapy/__init__.py" />
-    </list>
+    <list default="true" id="15071d6a-2d6a-4457-b163-3e40f3231134" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,8 +18,8 @@
       <file leaf-file-name="AoiSpider.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tutorial/spiders/AoiSpider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state relative-caret-position="216">
+              <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -90,7 +38,7 @@
       <file leaf-file-name="Analyser.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tutorial/spiders/analysis/Analyser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
+            <state relative-caret-position="729">
               <caret line="31" column="96" lean-forward="false" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="96" />
               <folding>
                 <element signature="e#15#31#0" expanded="true" />
@@ -102,8 +50,8 @@
       <file leaf-file-name="UtilSpider.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tutorial/spiders/UtilSpider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1485">
-              <caret line="55" column="35" lean-forward="true" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
+            <state relative-caret-position="1377">
+              <caret line="55" column="17" lean-forward="false" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
               <folding>
                 <element signature="e#15#35#0" expanded="true" />
               </folding>
@@ -115,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/tutorial/spiders/scrapy/spiders.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3159">
-              <caret line="124" column="60" lean-forward="false" selection-start-line="124" selection-start-column="52" selection-end-line="124" selection-end-column="60" />
+              <caret line="124" column="49" lean-forward="false" selection-start-line="124" selection-start-column="49" selection-end-line="124" selection-end-column="49" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -211,7 +159,7 @@
     <option name="width" value="2576" />
     <option name="height" value="1416" />
   </component>
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
@@ -229,9 +177,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -370,12 +315,15 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tutorial/spiders" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -948,6 +896,7 @@
       <workItem from="1527931340805" duration="9487000" />
       <workItem from="1527997459810" duration="2225000" />
       <workItem from="1528302075332" duration="846000" />
+      <workItem from="1528600807030" duration="31000" />
     </task>
     <servers />
   </component>
@@ -984,7 +933,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28133000" />
+    <option name="totallyTimeSpent" value="28164000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
@@ -998,8 +947,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1010,8 +959,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22988506" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22988506" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1369,7 +1318,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="4858" column="8" lean-forward="false" selection-start-line="4858" selection-start-column="8" selection-end-line="4858" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1400,7 +1348,7 @@
     <entry file="file://$PROJECT_DIR$/tutorial/spiders/scrapy/spiders.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3159">
-          <caret line="124" column="60" lean-forward="false" selection-start-line="124" selection-start-column="52" selection-end-line="124" selection-end-column="60" />
+          <caret line="124" column="49" lean-forward="false" selection-start-line="124" selection-start-column="49" selection-end-line="124" selection-end-column="49" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -1409,8 +1357,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tutorial/spiders/UtilSpider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1485">
-          <caret line="55" column="35" lean-forward="true" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
+        <state relative-caret-position="1377">
+          <caret line="55" column="17" lean-forward="false" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
           <folding>
             <element signature="e#15#35#0" expanded="true" />
           </folding>
@@ -1419,7 +1367,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tutorial/spiders/analysis/Analyser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
+        <state relative-caret-position="729">
           <caret line="31" column="96" lean-forward="false" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="96" />
           <folding>
             <element signature="e#15#31#0" expanded="true" />
@@ -1437,8 +1385,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tutorial/spiders/AoiSpider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state relative-caret-position="216">
+          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
           <folding />
         </state>
       </provider>

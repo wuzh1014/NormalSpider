@@ -28,7 +28,7 @@ class UtilSpider(BaseSpider):
                 elif not opt.scheme():
                     url = 'http://' + url
                 if url_domain.find('eastmoney') == -1:
-                    return
+                    continue
                 response.pipe.get(response.spider_name + 'been_url:' + url)
                 get_domain_list.append(url_domain)
                 get_url_list.append(url)
