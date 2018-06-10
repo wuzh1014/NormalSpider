@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="887514ed-098e-425a-88e2-66c8966a408c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spider.sublime-workspace" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/.idea/workspace.xml" afterPath="$PROJECT_DIR$/tutorial/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/spiders/AoiSpider.py" afterPath="$PROJECT_DIR$/tutorial/spiders/AoiSpider.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/spiders/BaseSpider.py" afterPath="$PROJECT_DIR$/tutorial/spiders/BaseSpider.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/spiders/TestUtilSpider.py" afterPath="$PROJECT_DIR$/tutorial/spiders/TestUtilSpider.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/spiders/scrapy/spiders.py" afterPath="$PROJECT_DIR$/tutorial/spiders/scrapy/spiders.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,11 +18,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AoiSpider.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AoiSpider.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tutorial/spiders/AoiSpider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="31" column="19" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="19" />
+            <state relative-caret-position="386">
+              <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding>
                 <element signature="e#15#25#0" expanded="true" />
               </folding>
@@ -69,7 +63,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseSpider.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BaseSpider.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tutorial/spiders/BaseSpider.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="646">
@@ -82,8 +76,8 @@
       <file leaf-file-name="spiders.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tutorial/spiders/scrapy/spiders.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="112" column="42" lean-forward="true" selection-start-line="112" selection-start-column="42" selection-end-line="112" selection-end-column="42" />
+            <state relative-caret-position="594">
+              <caret line="127" column="49" lean-forward="true" selection-start-line="127" selection-start-column="49" selection-end-line="127" selection-end-column="49" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -124,8 +118,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1036" />
-    <option name="y" value="163" />
+    <option name="x" value="792" />
+    <option name="y" value="133" />
     <option name="width" value="2576" />
     <option name="height" value="1416" />
   </component>
@@ -772,7 +766,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1528645469739</updated>
-      <workItem from="1528645470925" duration="1281000" />
+      <workItem from="1528645470925" duration="1547000" />
     </task>
     <servers />
   </component>
@@ -797,10 +791,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1281000" />
+    <option name="totallyTimeSpent" value="1547000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1036" y="163" width="2576" height="1416" extended-state="0" />
+    <frame x="792" y="133" width="2576" height="1416" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -853,6 +847,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/redis/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="1620" column="52" lean-forward="false" selection-start-line="1620" selection-start-column="52" selection-end-line="1620" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tutorial/spiders/TestUtilSpider.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
@@ -864,13 +866,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial/spiders/scrapy/spiders.py">
+    <entry file="file://$PROJECT_DIR$/tutorial/spiders/BaseSpider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="112" column="42" lean-forward="true" selection-start-line="112" selection-start-column="42" selection-end-line="112" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="646">
+          <caret line="56" column="8" lean-forward="false" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -890,29 +890,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial/spiders/AoiSpider.py">
+    <entry file="file://$PROJECT_DIR$/tutorial/spiders/scrapy/spiders.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="31" column="19" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="19" />
+        <state relative-caret-position="594">
+          <caret line="127" column="49" lean-forward="true" selection-start-line="127" selection-start-column="49" selection-end-line="127" selection-end-column="49" />
           <folding>
-            <element signature="e#15#25#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/redis/client.py">
+    <entry file="file://$PROJECT_DIR$/tutorial/spiders/AoiSpider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="1620" column="52" lean-forward="false" selection-start-line="1620" selection-start-column="52" selection-end-line="1620" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial/spiders/BaseSpider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="56" column="8" lean-forward="false" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
-          <folding />
+        <state relative-caret-position="386">
+          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding>
+            <element signature="e#15#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

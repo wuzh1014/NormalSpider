@@ -120,13 +120,15 @@ class RedisMixin(object):
         """
         url = bytes_to_str(data, self.redis_encoding)
         opt = URL(url)
-        print(url)
+
         if opt.domain().find('eastmoney') == -1:
             print('eastmoney false')
             return
         if opt.domain() == 'iguba.eastmoney.com':
             self.rlink.lpush(self.redis_key, url)
+            print(self.redis_name + 'been_url:' + url)
             been_flag = self.rlink.get(self.redis_name + 'been_url:' + url)
+            print(been_flag)
             if been_flag:
                 RedisMixin.site_no_add_content_count += 1
                 time.sleep(RedisMixin.site_no_add_content_count * RedisMixin.site_no_add_content_count)
@@ -134,7 +136,7 @@ class RedisMixin(object):
                 return
             else:
                 RedisMixin.site_no_add_content_count = 0
-
+        print(url)
         return self.make_requests_from_url(url)
 
     def schedule_next_requests(self):

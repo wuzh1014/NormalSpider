@@ -30,7 +30,6 @@ class AoiSpider(UtilSpider):
 
     def init_parse(self, response):
         self.rlink.setex(response.spider_name + 'living', 10, 1)
-        pdb.set_trace()
         response.pipe = self.rlink.pipeline()
         response.pipe.multi()
 
@@ -40,7 +39,7 @@ class AoiSpider(UtilSpider):
 
         self.init_parse(response)
 
-        self.rlink.setex(response.spider_name + 'been_url:' + response.url, 1, self.day_time * 1)
+        self.rlink.setex(response.spider_name + 'been_url:' + response.url, self.day_time * 1, 1)
         if response.page_domain == 'iguba.eastmoney.com':
             response.is_target = True
 
