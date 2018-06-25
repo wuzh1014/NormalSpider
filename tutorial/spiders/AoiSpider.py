@@ -57,7 +57,9 @@ class AoiSpider(UtilSpider):
                 self.avg_size = len(response.strBody)
 
             if len(response.strBody) < int(self.avg_size / 2):
-                raise CloseSpider('wasted' + response.url)
+                waste_str = 'wasted' + response.url
+                print(waste_str)
+                raise CloseSpider(waste_str)
             else:
                 self.avg_size = (len(response.strBody) + self.avg_size) / 2
 
