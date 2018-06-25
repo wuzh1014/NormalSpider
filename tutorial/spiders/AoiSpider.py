@@ -9,7 +9,7 @@ sys.path.append("./")
 sys.path.append("../../")
 from tutorial.spiders.UtilSpider import UtilSpider
 from tutorial.spiders.SpiderUtil import SpiderUtil
-
+from scrapy.exceptions import CloseSpider
 
 class AoiSpider(UtilSpider):
     avg_size = 0
@@ -57,8 +57,7 @@ class AoiSpider(UtilSpider):
                 self.avg_size = len(response.strBody)
 
             if len(response.strBody) < int(self.avg_size / 2):
-                print('wasted' + response.url)
-                sys.exit(2)
+                raise CloseSpider('wasted' + response.url)
             else:
                 self.avg_size = (len(response.strBody) + self.avg_size) / 2
 
