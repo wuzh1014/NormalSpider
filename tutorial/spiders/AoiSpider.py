@@ -35,9 +35,8 @@ class AoiSpider(UtilSpider):
         response.all_url = {}
 
     def parse(self, response):
-        pdb.set_trace()
-        if not hasattr(response.body, 'encode'):
-            print('not str body instead of ' + str(type(response.body)))
+        if type(response.body).__name__ != 'bytes' or type(response.body).__name__ != 'str':
+            print('not str body instead of ' + type(response.body).__name__)
             return
 
         response.spider_name = AoiSpider.redis_name
@@ -56,7 +55,11 @@ class AoiSpider(UtilSpider):
             else:
                 self.avg_size = (len(response.body) + self.avg_size) / 2
 
-            body_md5 = hashlib.md5(response.body.encode('utf-8')).hexdigest()
+            md5_body = response.body
+            if type(response.body).__name__ != 'str':
+                md5_body = response.body.encode('utf-8')
+
+            body_md5 = hashlib.md5(md5_body).hexdigest()
             content_pre = response.spider_name + 'cache_content:' + response.url
             pre_md5 = self.rlink.get(content_pre)
             if pre_md5 == body_md5:
