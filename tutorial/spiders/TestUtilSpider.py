@@ -49,8 +49,7 @@ class TestUtilSpider(unittest.TestCase):
         print(SpiderUtil().return_freq_word(test_str))
         return True
 
-    def test_trans_json(self):
-        html_str = '''
+    html_str = '''
 
 <!DOCTYPE html>
 <html>
@@ -440,7 +439,9 @@ grpager.init($(".grpager"),'taarticle', itemdata.count, 50, thispage,taid);
 </body>
 </html>
 '''
-        self.body = html_str
+
+    def test_trans_json(self):
+        self.body = self.html_str
         self.all_url = []
         BaseSpider.extract_json_data(self)
         BaseSpider.extract_person_url(self)
@@ -449,6 +450,11 @@ grpager.init($(".grpager"),'taarticle', itemdata.count, 50, thispage,taid);
         print(input_list)
 
     def test_trans_date(self):
+        time_str = '2018-05-26 10:22:00'
+        dt = Tool.parse_date(time_str)
+        print(dt)
+
+    def test_whole_trans(self):
         time_str = '2018-05-26 10:22:00'
         dt = Tool.parse_date(time_str)
         print(dt)
