@@ -39,8 +39,9 @@ class AoiSpider(UtilSpider):
             print('not str body instead of ' + type(response.body).__name__)
             return
 
+        response.strBody = response.body
         if type(response.body).__name__ == 'bytes':
-            response.body = response.body.decode('utf-8')
+            response.strBody = response.body.decode('utf-8')
 
         response.spider_name = AoiSpider.redis_name
         AoiSpider.deal_domain(response)
@@ -50,19 +51,15 @@ class AoiSpider(UtilSpider):
             response.is_target = True
 
             if self.avg_size == 0:
-                self.avg_size = len(response.body)
+                self.avg_size = len(response.strBody)
 
-            if len(response.body) < int(self.avg_size / 2):
+            if len(response.strBody) < int(self.avg_size / 2):
                 print('wasted' + response.url)
                 sys.exit(2)
             else:
-                self.avg_size = (len(response.body) + self.avg_size) / 2
+                self.avg_size = (len(response.strBody) + self.avg_size) / 2
 
-            md5_body = response.body
-            if type(response.body).__name__ == 'str':
-                md5_body = response.body.encode('utf-8')
-
-            body_md5 = hashlib.md5(md5_body).hexdigest()
+            body_md5 = hashlib.md5(response.strBody.encode('utf-8')).hexdigest()
             content_pre = response.spider_name + 'cache_content:' + response.url
             pre_md5 = self.rlink.get(content_pre)
             if pre_md5 == body_md5:

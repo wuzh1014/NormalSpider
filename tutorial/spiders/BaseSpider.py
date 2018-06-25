@@ -30,7 +30,7 @@ class BaseSpider(ExRedisSpider):
 
     @staticmethod
     def extract_json_data(response):
-        json_data = re.compile('var itemdata =([\s\S]*?)"me":"').search(response.body)
+        json_data = re.compile('var itemdata =([\s\S]*?)"me":"').search(response.strBody)
         if json_data:
             json_data = json_data.group(1) + '"me":""}'
             json_data = json.loads(json_data)
