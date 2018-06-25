@@ -39,21 +39,17 @@ class BaseSpider(ExRedisSpider):
 
     @staticmethod
     def extract_person_url(response):
-        if not hasattr(response, 'all_url'):
-            response.all_url = []
         if response.json_data:
             for item in response.json_data.get('re'):
                 merge_url = 'http://guba.eastmoney.com/news,' + str(item.get('post_guba').get('stockbar_code')) + ',' + str(item.get('post_id')) + '.html'
-                response.all_url.append(merge_url)
+                response.all_url[merge_url] = 1
 
     @staticmethod
     def extract_normal_url(response):
-        if not hasattr(response, 'all_url'):
-            response.all_url = []
         xpath_url = response.xpath('//a[contains(@href, "/") and not(contains(@href, "java"))]')
         for al in xpath_url:
             url = al.xpath('@href').extract()[0]
-            response.all_url.append(url)
+            response.all_url[url] = 1
 
     @staticmethod
     def init_check(response):

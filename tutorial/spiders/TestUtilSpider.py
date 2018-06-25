@@ -53,7 +53,7 @@ class TestUtilSpider(unittest.TestCase):
 
     def test_trans_json(self):
         self.body = SiteContent.html_str
-        self.all_url = []
+        self.all_url = {}
         BaseSpider.extract_json_data(self)
         BaseSpider.extract_person_url(self)
         print(self.all_url)

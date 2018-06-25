@@ -32,10 +32,11 @@ class AoiSpider(UtilSpider):
         self.rlink.setex(response.spider_name + 'living', 10, 1)
         response.pipe = self.rlink.pipeline()
         response.pipe.multi()
+        response.all_url = {}
 
     def parse(self, response):
         if not hasattr(response.body, 'encode'):
-            print('not str body instead of ' + type(response.body))
+            print('not str body instead of ' + str(type(response.body)))
             return
 
         response.spider_name = AoiSpider.redis_name
