@@ -35,7 +35,7 @@ class AoiSpider(UtilSpider):
         response.all_url = {}
 
     def parse(self, response):
-        if type(response.body).__name__ != 'bytes' or type(response.body).__name__ != 'str':
+        if type(response.body).__name__ != 'bytes' and type(response.body).__name__ != 'str':
             print('not str body instead of ' + type(response.body).__name__)
             return
 

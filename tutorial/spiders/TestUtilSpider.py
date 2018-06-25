@@ -67,7 +67,7 @@ class TestUtilSpider(unittest.TestCase):
 
     def test_whole_trans(self):
         self.url = SiteContent.html_url
-        self.body = SiteContent.html_str
+        self.body = SiteContent.html_str.encode('utf-8')
         self.xpath = etree.HTML(self.body)
         self.spider_name = AoiSpider.redis_name
         AoiSpider().parse(self)
