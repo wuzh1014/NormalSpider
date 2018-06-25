@@ -39,6 +39,9 @@ class AoiSpider(UtilSpider):
             print('not str body instead of ' + type(response.body).__name__)
             return
 
+        if type(response.body).__name__ == 'bytes':
+            response.body = response.body.decode('utf-8')
+
         response.spider_name = AoiSpider.redis_name
         AoiSpider.deal_domain(response)
         self.init_parse(response)
@@ -56,7 +59,7 @@ class AoiSpider(UtilSpider):
                 self.avg_size = (len(response.body) + self.avg_size) / 2
 
             md5_body = response.body
-            if type(response.body).__name__ != 'str':
+            if type(response.body).__name__ == 'str':
                 md5_body = response.body.encode('utf-8')
 
             body_md5 = hashlib.md5(md5_body).hexdigest()

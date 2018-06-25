@@ -14,7 +14,7 @@ from tutorial.spiders.Tool import Tool
 from tutorial.spiders import SiteContent
 from lxml import etree
 import json
-
+import  urllib.request
 
 class TestUtilSpider(unittest.TestCase):
     def setUp(self):
@@ -67,7 +67,15 @@ class TestUtilSpider(unittest.TestCase):
 
     def test_whole_trans(self):
         self.url = SiteContent.html_url
-        self.body = SiteContent.html_str.encode('utf-8')
+        self.body = SiteContent.html_str
+        self.xpath = etree.HTML(self.body)
+        self.spider_name = AoiSpider.redis_name
+        AoiSpider().parse(self)
+
+    def test_one_trans(self):
+        self.url = 'http://iguba.eastmoney.com/6712111507146464'
+        res = urllib.request.urlopen(self.url)
+        self.body = res.read().decode('utf-8')
         self.xpath = etree.HTML(self.body)
         self.spider_name = AoiSpider.redis_name
         AoiSpider().parse(self)
