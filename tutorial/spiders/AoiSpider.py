@@ -34,11 +34,13 @@ class AoiSpider(UtilSpider):
         response.pipe.multi()
 
     def parse(self, response):
+        if not hasattr(response.body, 'encode'):
+            print('not str body instead of ' + type(response.body))
+            return
+
         response.spider_name = AoiSpider.redis_name
         AoiSpider.deal_domain(response)
-
         self.init_parse(response)
-
         self.rlink.setex(response.spider_name + 'been_url:' + response.url, self.day_time * 1, 1)
         if response.page_domain == 'iguba.eastmoney.com':
             response.is_target = True
@@ -74,4 +76,4 @@ class AoiSpider(UtilSpider):
                 print('parse_date false')
                 return
         else:
-            print('hasattr false')
+            print('hasattr not')

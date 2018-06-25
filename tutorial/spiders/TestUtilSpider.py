@@ -47,10 +47,9 @@ class TestUtilSpider(unittest.TestCase):
         return True
 
     def test_return_freq_word(self):
-        test_str = 'asdaaa,aaa,aaa,aaa,aaa,aaaaaaaaaaaagadgsszgsg'
+        test_str = 'asdaaa,aaa,aaa,aaa,aaa,aaaaaaaaaa'
         print(SpiderUtil().return_freq_word(test_str))
         return True
-
 
     def test_trans_json(self):
         self.body = SiteContent.html_str
@@ -78,4 +77,7 @@ class TestUtilSpider(unittest.TestCase):
     # self.assertRaises(KeyError)
 
 if __name__ == '__main__':
-    unittest.main()
+    suite = unittest.TestSuite()
+    suite.addTest(TestUtilSpider('test_whole_trans'))
+    unittest.TextTestRunner(verbosity=2).run(suite)
+    # unittest.main()
