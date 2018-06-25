@@ -35,6 +35,7 @@ class AoiSpider(UtilSpider):
         response.all_url = {}
 
     def parse(self, response):
+        pdb.set_trace()
         if not hasattr(response.body, 'encode'):
             print('not str body instead of ' + str(type(response.body)))
             return
