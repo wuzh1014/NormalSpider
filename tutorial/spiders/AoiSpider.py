@@ -41,7 +41,10 @@ class AoiSpider(UtilSpider):
 
         response.strBody = response.body
         if type(response.body).__name__ == 'bytes':
-            response.strBody = response.body.decode('utf-8')
+            if not hasattr(response, 'body_as_unicode'):
+                response.strBody = response.body.decode()
+            else:
+                response.strBody = response.body_as_unicode()
 
         response.spider_name = AoiSpider.redis_name
         AoiSpider.deal_domain(response)
