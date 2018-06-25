@@ -52,7 +52,7 @@ class AoiSpider(UtilSpider):
             else:
                 self.avg_size = (len(response.body) + self.avg_size) / 2
 
-            body_md5 = hashlib.md5(response.body).hexdigest()
+            body_md5 = hashlib.md5(response.body.encode('utf-8')).hexdigest()
             content_pre = response.spider_name + 'cache_content:' + response.url
             pre_md5 = self.rlink.get(content_pre)
             if pre_md5 == body_md5:

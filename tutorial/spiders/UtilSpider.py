@@ -69,7 +69,6 @@ class UtilSpider(BaseSpider):
     def parse_date(response):
         input_list = UtilSpider.format_item_list(response)
         date_map = {}
-        pdb.set_trace()
         for item in input_list:
             response.pipe.hset(response.spider_name + 'content_map:' + item[0], item[1], item[2])
             date_map[item[0]] = 1
