@@ -50,12 +50,10 @@ class BaseSpider(ExRedisSpider):
     def extract_normal_url(response):
         if not hasattr(response, 'all_url'):
             response.all_url = []
-        response.all_url.extend(response.xpath('//a[contains(@href, "/") and not(contains(@href, "java"))]'))
-        all_url = []
-        for al in response.all_url:
+        xpath_url = response.xpath('//a[contains(@href, "/") and not(contains(@href, "java"))]')
+        for al in xpath_url:
             url = al.xpath('@href').extract()[0]
-            all_url.append(url)
-        response.all_url = all_url
+            response.all_url.append(url)
 
     @staticmethod
     def init_check(response):
