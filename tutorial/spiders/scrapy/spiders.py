@@ -126,12 +126,11 @@ class RedisMixin(object):
             return
         if opt.domain() == 'iguba.eastmoney.com':
             self.rlink.rpush(self.redis_key, url)
-            print(self.redis_name + 'been_url:' + url)
             been_flag = self.rlink.get(self.redis_name + 'been_url:' + url)
             if been_flag:
+                print(self.redis_name + 'been_url:' + url)
                 RedisMixin.site_no_add_content_count += 1
                 time.sleep(RedisMixin.site_no_add_content_count * RedisMixin.site_no_add_content_count)
-                print('been_flag false')
                 return
             else:
                 RedisMixin.site_no_add_content_count = 0
