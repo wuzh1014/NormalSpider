@@ -11,8 +11,8 @@ from tutorial.spiders.UtilSpider import UtilSpider
 from tutorial.spiders.SpiderUtil import SpiderUtil
 from scrapy.exceptions import CloseSpider
 
+
 class AoiSpider(UtilSpider):
-    avg_size = 0
 
     def __init__(self):
         pool = redis.ConnectionPool(host=Tool.service_ip, port=6479, password='fuck-u-ass-hole-guy')
@@ -53,16 +53,11 @@ class AoiSpider(UtilSpider):
         if response.page_domain == 'iguba.eastmoney.com':
             response.is_target = True
 
-            if self.avg_size == 0:
-                self.avg_size = len(response.strBody)
-
-            if len(response.strBody) < int(self.avg_size / 5):
+            if len(response.strBody) < 500:
                 waste_str = 'wasted:' + response.url
                 print(waste_str)
                 self.rlink.set(response.spider_name + 'wasted:' + response.url, response.strBody)
                 raise CloseSpider(waste_str)
-            else:
-                self.avg_size = (len(response.strBody) + self.avg_size) / 2
 
             body_md5 = hashlib.md5(response.strBody.encode('utf-8')).hexdigest()
             content_pre = response.spider_name + 'cache_content:' + response.url
