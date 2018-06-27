@@ -49,8 +49,9 @@ class AoiSpider(UtilSpider):
         response.spider_name = AoiSpider.redis_name
         AoiSpider.deal_domain(response)
         self.init_parse(response)
-        self.rlink.setex(response.spider_name + 'been_url:' + response.url, self.day_time * 1, 1)
+
         if response.page_domain == 'iguba.eastmoney.com':
+            self.rlink.setex(response.spider_name + 'been_url:' + response.url, self.day_time * 1, 1)
             response.is_target = True
 
             if len(response.strBody) < 500:
@@ -68,6 +69,7 @@ class AoiSpider(UtilSpider):
             else:
                 self.rlink.set(content_pre, body_md5)
         else:
+            self.rlink.set(response.spider_name + 'been_url:' + response.url, 1)
             response.is_target = False
 
         if not AoiSpider.init_check(response):
