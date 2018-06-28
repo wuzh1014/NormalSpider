@@ -73,9 +73,9 @@ class Analyser:
         return clean_list
 
 if __name__ != "__main__":
-    pass
-    # threads = [threading.Thread(target=Analyser().do_analysis(), args=())]
-    # threads[0].setDaemon(True)
-    # threads[0].start()
+    # pass
+    threads = [threading.Thread(target=Analyser().do_analysis(), args=())]
+    threads[0].setDaemon(True)
+    threads[0].start()
     
 
