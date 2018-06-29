@@ -27,6 +27,9 @@ class Analyser:
                 # while RedisMixin.site_no_add_content_count == 0:
                 #     time.sleep(10)
 
+                if RedisMixin.site_no_add_content_count == 0:
+                    return 
+
                 print('RedisMixin do_analysis')
 
                 fetch_date = self.rlink.zrange(RedisMixin.redis_name + 'date_list', self.date_pointer, self.date_pointer + 1)
