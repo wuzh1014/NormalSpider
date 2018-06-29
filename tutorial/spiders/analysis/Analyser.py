@@ -24,8 +24,8 @@ class Analyser:
     def do_analysis(self):
         while True:
             try:
-                while RedisMixin.site_no_add_content_count == 0:
-                    time.sleep(10)
+                # while RedisMixin.site_no_add_content_count == 0:
+                #     time.sleep(10)
 
                 print('RedisMixin do_analysis')
 
