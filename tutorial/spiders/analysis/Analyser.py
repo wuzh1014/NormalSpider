@@ -24,9 +24,13 @@ class Analyser:
     def do_analysis(self):
         while True:
             try:
-                while RedisMixin.site_no_add_content_count == 0:
-                    print('RedisMixin 1')
-                    time.sleep(1)
+                # while RedisMixin.site_no_add_content_count == 0:
+                #     time.sleep(10)
+
+                if RedisMixin.site_no_add_content_count == 0:
+                    return 
+
+                print('RedisMixin do_analysis')
 
                 fetch_date = self.rlink.zrange(RedisMixin.redis_name + 'date_list', self.date_pointer, self.date_pointer + 1)
                 analysed = self.rlink.hget(RedisMixin.redis_name + 'analysed_date', self.date_pointer)
@@ -72,10 +76,10 @@ class Analyser:
             clean_list.append((i, word_map[i]))
         return clean_list
 
+
 if __name__ != "__main__":
-    pass
-    # threads = [threading.Thread(target=Analyser().do_analysis(), args=())]
-    # threads[0].setDaemon(True)
-    # threads[0].start()
+    threads = [threading.Thread(target=Analyser().do_analysis(), args=())]
+    threads[0].setDaemon(True)
+    threads[0].start()
     
 

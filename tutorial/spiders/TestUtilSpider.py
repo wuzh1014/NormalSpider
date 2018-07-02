@@ -1,20 +1,12 @@
 # coding:utf-8
-import re
-import time
-import redis
-from purl import URL
-import hashlib
 import unittest
-from tutorial.spiders.UtilSpider import *
-from tutorial.spiders.SpiderUtil import *
-from tutorial.spiders.Tool import *
 from tutorial.spiders.BaseSpider import *
 from tutorial.spiders.AoiSpider import *
 from tutorial.spiders.Tool import Tool
 from tutorial.spiders import SiteContent
 from lxml import etree
-import json
-import  urllib.request
+import urllib.request
+
 
 class TestUtilSpider(unittest.TestCase):
     def setUp(self):

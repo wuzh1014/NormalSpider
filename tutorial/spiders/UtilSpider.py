@@ -4,7 +4,7 @@ import pdb
 from tutorial.spiders.BaseSpider import BaseSpider
 from tutorial.spiders.Tool import Tool
 from tutorial.spiders.SpiderUtil import SpiderUtil
-
+import hashlib
 
 class UtilSpider(BaseSpider):
     def parse(self, response):
@@ -70,7 +70,7 @@ class UtilSpider(BaseSpider):
         input_list = UtilSpider.format_item_list(response)
         date_map = {}
         for item in input_list:
-            response.pipe.hset(response.spider_name + 'content_map:' + item[0], item[1], item[2])
+            response.pipe.hset(response.spider_name + 'content_map:' + item[0], hashlib.md5(item[2].encode('utf-8')).hexdigest(), item[2])
             date_map[item[0]] = 1
         for date in date_map:
             response.pipe.zadd(response.spider_name + 'date_list', int(date), date)
